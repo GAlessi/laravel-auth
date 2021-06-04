@@ -62,7 +62,7 @@
 
             <div>
                 <div>
-                    <button class="btn" type="submit">
+                    <button class="my_btn" type="submit">
                         EDIT
                     </button>
                 </div>

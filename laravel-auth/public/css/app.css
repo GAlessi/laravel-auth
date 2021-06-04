@@ -1,5 +1,94 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.my_btn {
+  padding: 10px 20px;
+  background-color: red;
+  border: 1px solid darkgrey;
+  text-decoration: none;
+}
+
+.my_container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_container header {
+  width: 100%;
+}
+
+.my_container main {
+  min-height: calc(100vh - 161px);
+  padding: 30px;
+}
+
+.my_container main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.my_container main .mainList {
+  list-style: none;
+}
+
+.my_container main .mainList li {
+  margin-bottom: 30px;
+}
+
+.my_container main .mainList li h2 {
+  margin-bottom: 10px;
+}
+
+.my_container main .mainList li h2 span {
+  font-weight: normal;
+}
+
+.my_container main .mainList li h2 a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.my_container main .mainList li ul {
+  margin-left: 20px;
+}
+
+.my_container main .mainList li ul li {
+  margin-bottom: 10px;
+}
+
+.my_container main.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_container main.form input,
+.my_container main.form select {
+  margin: 10px 0;
+  min-width: 300px;
+}
+
+.my_container main.form .my_btn {
+  margin: 20px 0;
+}
+
+.my_container footer {
+  background-color: grey;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
