@@ -31,11 +31,13 @@
             <div>
                 <select id="brand_id" name="brand_id" required >
                     @foreach ($brands as $brand)
-                        <option value="{{ $brand -> id }}">
+                        <option value="{{ $brand -> id }}"
 
                         @if ($car -> brand -> id == $brand -> id)
                             selected
                         @endif
+                        >
+                        
                     {{ $brand -> name }} ({{ $brand -> nationality }})</option>
                     @endforeach
                 </select>

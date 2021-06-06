@@ -31,7 +31,9 @@ class UserController extends Controller
             'model' => 'required|string|min:3',
             'KW' => 'required|integer|min:100|max:3000',
             'brand_id' => 'required|exists:brands,id|integer',
-            'pilots_id' => 'required'
+            'pilots_id' => 'required|exists:pilots,id|array',
+            'pilots_id.*' => 'integer',
+
 
         ]);
 
@@ -65,7 +67,8 @@ class UserController extends Controller
             'model' => 'required|string|min:3',
             'KW' => 'required|integer|min:100|max:3000',
             'brand_id' => 'required|exists:brands,id|integer',
-            'pilots_id' => 'required'
+            'pilots_id' => 'required|exists:pilots,id|array',
+            'pilots_id.*' => 'integer',
 
         ]);
 
