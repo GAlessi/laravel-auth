@@ -27,10 +27,13 @@ class UserController extends Controller
        	 // dd($request -> all());
 
          $validated = $request -> validate([
-             'name' => 'required|string|min:3',
-             'model' => 'required|string|min:3',
-             'KW' => 'required|integer|min:10|max:3000',
-         ]);
+            'name' => 'required|string|min:3',
+            'model' => 'required|string|min:3',
+            'KW' => 'required|integer|min:100|max:3000',
+            'brand_id' => 'required|exists:brands,id|integer',
+            'pilots_id' => 'required'
+
+        ]);
 
          $brand = Brand::findOrFail($request -> get('brand_id'));
 
@@ -60,7 +63,10 @@ class UserController extends Controller
         $validated = $request -> validate([
             'name' => 'required|string|min:3',
             'model' => 'required|string|min:3',
-            'KW' => 'required|integer|min:10|max:3000',
+            'KW' => 'required|integer|min:100|max:3000',
+            'brand_id' => 'required|exists:brands,id|integer',
+            'pilots_id' => 'required'
+
         ]);
 
         $car = Car::findOrFail($id);
